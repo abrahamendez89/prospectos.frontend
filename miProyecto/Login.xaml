@@ -1,0 +1,40 @@
+﻿<Window x:Class="miProyecto.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:miProyecto"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="226.073" Width="380.876">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Content="Usuario:" HorizontalAlignment="Left" Margin="5" />
+            <Label Grid.Column="0" Grid.Row="1" Content="Contraseña:" HorizontalAlignment="Left" Margin="5" />
+            <TextBox x:Name="txtUser" Grid.Column="1" Grid.Row="0" Margin="5"></TextBox>
+            <PasswordBox x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Margin="5"></PasswordBox >
+            <Button Grid.Column="1" Grid.Row="2" Margin="20,5,5,5" x:Name="btnEntrar">Entrar</Button>
+        </Grid>
+
+
+    </Grid>
+</Window>

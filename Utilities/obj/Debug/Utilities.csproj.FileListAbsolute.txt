@@ -1,0 +1,11 @@
+C:\Users\abrah\source\repos\miProyecto\Utilities\obj\Debug\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\abrah\source\repos\miProyecto\Utilities\bin\Debug\Utilities.dll
+C:\Users\abrah\source\repos\miProyecto\Utilities\bin\Debug\Utilities.pdb
+C:\Users\abrah\source\repos\miProyecto\Utilities\bin\Debug\Newtonsoft.Json.dll
+C:\Users\abrah\source\repos\miProyecto\Utilities\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\abrah\source\repos\miProyecto\Utilities\bin\Debug\Newtonsoft.Json.xml
+C:\Users\abrah\source\repos\miProyecto\Utilities\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\abrah\source\repos\miProyecto\Utilities\obj\Debug\Utilities.csprojAssemblyReference.cache
+C:\Users\abrah\source\repos\miProyecto\Utilities\obj\Debug\Utilities.csproj.CopyComplete
+C:\Users\abrah\source\repos\miProyecto\Utilities\obj\Debug\Utilities.dll
+C:\Users\abrah\source\repos\miProyecto\Utilities\obj\Debug\Utilities.pdb

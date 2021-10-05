@@ -1,0 +1,34 @@
+import MySQLDB from "../../DBUtils/MySQLDB"
+import InsertedModel from '../InsertedModel.entity';
+export class @tabla{
+@columnas
+}
+export function @tablaConsultaTodos(db:MySQLDB){
+    console.log("Entity.@tabla.@tablaConsultaTodos()");
+    return db.query("select * from @tabla",[]);
+}
+export function @tablaConsultaPorID(id:Number, db:MySQLDB){
+    console.log("Entity.@tabla.@tablaConsultaPorID()");
+    return db.query("select * from @tabla where id@tabla = ?", id);
+}
+export function @tablaGuardar(_@tabla:@tabla, db:MySQLDB){
+    console.log("Entity.@tabla.@tablaGuardar()");
+    let query:String = "";
+    let id:Number = 0;
+    if(_@tabla.id@tabla && _@tabla.id@tabla != 0)
+    {
+        query = "update @tabla set ? where id@tabla = "+_@tabla.id@tabla;
+        id = _@tabla.id@tabla;    
+    }
+    else
+    {
+        query = "insert into @tabla set ?", _@tabla;
+    }
+
+    return db.query(query, _@tabla).then((insertedModel:InsertedModel)=>{
+        
+        if(id == 0)
+            id = insertedModel.insertId;
+        return @tablaConsultaPorID(id, db);
+    });
+}

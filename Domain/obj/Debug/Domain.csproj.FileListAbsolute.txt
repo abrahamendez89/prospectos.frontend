@@ -1,0 +1,6 @@
+C:\Users\abrah\source\repos\miProyecto\Domain\bin\Debug\Domain.dll
+C:\Users\abrah\source\repos\miProyecto\Domain\bin\Debug\Domain.pdb
+C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.dll
+C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.pdb
