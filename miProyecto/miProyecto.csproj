@@ -64,6 +64,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="UCVentanas\UCCapturaProspecto.xaml.cs">
+      <DependentUpon>UCCapturaProspecto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCVentanas\UCCapturaProspectoDocumento.xaml.cs">
+      <DependentUpon>UCCapturaProspectoDocumento.xaml</DependentUpon>
+    </Compile>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -84,6 +90,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Message.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCVentanas\UCCapturaProspecto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCVentanas\UCCapturaProspectoDocumento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

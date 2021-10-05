@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Users\abrah\source\repos\miProyecto\UI\obj\Debug\
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\
 UI
 none
 false
 DEBUG;TRACE
 
-2191209771
+5-1319655910
 
-6-1067274962
-14106547024
-UserControls\NavBar.xaml;UserControls\NavBarButton.xaml;
+91792293117
+151085855521
+UserControls\UCButton.xaml;UserControls\UCNavBar.xaml;UserControls\UCNavBarButton.xaml;UserControls\UCOpcionMenu.xaml;UserControls\UCTextbox.xaml;
 
 True
 

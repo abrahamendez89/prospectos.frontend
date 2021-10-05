@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="UI.UserControls.NavBar"
+﻿<UserControl x:Class="UI.UserControls.UCNavBar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UI.UserControls"
-             mc:Ignorable="d" >
+             mc:Ignorable="d" Height="auto">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -13,9 +13,9 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <local:NavBarButton x:Name="btnHome" Grid.Column="0" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood" />
-        <local:NavBarButton x:Name="btnHome2" Grid.Column="1" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood"/>
-        <local:NavBarButton x:Name="btnHome3" Grid.Column="2" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood"/>
-        <local:NavBarButton x:Name="btnHome4" Grid.Column="3" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood"/>
+        <local:UCNavBarButton x:Name="btnHome" Grid.Column="0" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood" />
+        <local:UCNavBarButton x:Name="btnHome2" Grid.Column="1" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood"/>
+        <local:UCNavBarButton x:Name="btnHome3" Grid.Column="2" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood"/>
+        <local:UCNavBarButton x:Name="btnHome4" Grid.Column="3" Icon="Home" IconSize="40" IconColor="Brown" IconOverColor="BurlyWood"/>
     </Grid>
 </UserControl>

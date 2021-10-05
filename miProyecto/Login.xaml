@@ -30,8 +30,8 @@
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Grid.Row="0" Content="Usuario:" HorizontalAlignment="Left" Margin="5" />
             <Label Grid.Column="0" Grid.Row="1" Content="Contraseña:" HorizontalAlignment="Left" Margin="5" />
-            <TextBox x:Name="txtUser" Grid.Column="1" Grid.Row="0" Margin="5"></TextBox>
-            <PasswordBox x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Margin="5"></PasswordBox >
+            <TextBox x:Name="txtUser" Grid.Column="1" Grid.Row="0" Margin="5" Text="abraham"></TextBox>
+            <PasswordBox x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Margin="5" Password="contrasena"></PasswordBox >
             <Button Grid.Column="1" Grid.Row="2" Margin="20,5,5,5" x:Name="btnEntrar">Entrar</Button>
         </Grid>
 

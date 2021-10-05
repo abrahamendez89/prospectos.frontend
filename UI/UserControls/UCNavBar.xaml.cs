@@ -18,9 +18,9 @@ namespace UI.UserControls
     /// <summary>
     /// Interaction logic for NavBar.xaml
     /// </summary>
-    public partial class NavBar : UserControl
+    public partial class UCNavBar : UserControl
     {
-        public NavBar()
+        public UCNavBar()
         {
             InitializeComponent();
         }

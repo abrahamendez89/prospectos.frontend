@@ -19,9 +19,9 @@ namespace UI.UserControls
     /// <summary>
     /// Interaction logic for NavBarButton.xaml
     /// </summary>
-    public partial class NavBarButton : UserControl
+    public partial class UCNavBarButton : UserControl
     {
-        public delegate void _onClick(NavBarButton uc);
+        public delegate void _onClick(UCNavBarButton uc);
         public event _onClick onClick;
         public double IconSize { get { return icon.FontSize; } set { icon.FontSize = value; } }
         public FontAwesomeSolidIcon? Icon { get { return icon.SolidIcon; } set { icon.SolidIcon = value; } }
@@ -30,11 +30,11 @@ namespace UI.UserControls
         public Brush IconOverColor { get { return this.overIconColor; } set { this.overIconColor = value; } }
         private Brush overIconColor;
         private Brush iconColor;
-        public NavBarButton()
+        public UCNavBarButton()
         {
             InitializeComponent();
-            this.grid.MouseEnter += NavBarButton_MouseEnter;
-            this.grid.MouseLeave += NavBarButton_MouseLeave;
+            this.MouseEnter += NavBarButton_MouseEnter;
+            this.MouseLeave += NavBarButton_MouseLeave;
 
         }
 
