@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\abrah\source\repos\miProyecto\UI\obj\Debug\
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\
 UI
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 2191209771
 
-5-224915595
-14106547024
+6-1067274962
+14183637641
 UserControls\NavBar.xaml;UserControls\NavBarButton.xaml;
 
-False
+True
 

@@ -16,3 +16,21 @@ C:\Users\abrah\source\repos\miProyecto\UI\obj\Debug\UI.pdb
 C:\Users\abrah\source\repos\miProyecto\UI\obj\Debug\UserControls\NavBar.g.cs
 C:\Users\abrah\source\repos\miProyecto\UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\abrah\source\repos\miProyecto\UI\obj\Debug\UserControls\NavBar.baml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\bin\Debug\UI.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\bin\Debug\UI.pdb
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\bin\Debug\Meziantou.WpfFontAwesome.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\NavBar.g.cs
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\NavBarButton.g.cs
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI_MarkupCompile.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI_MarkupCompile.lref
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\NavBar.baml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\NavBarButton.baml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.g.resources
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UI.pdb
