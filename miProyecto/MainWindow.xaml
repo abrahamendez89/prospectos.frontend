@@ -30,7 +30,9 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1" x:Name="grdContenedor">
-                <UCVent:UCCapturaProspecto></UCVent:UCCapturaProspecto>
+                <ScrollViewer>
+                    <UCVent:UCCapturaProspecto></UCVent:UCCapturaProspecto>
+                </ScrollViewer>
             </Grid>
         </Grid>
     </Grid>

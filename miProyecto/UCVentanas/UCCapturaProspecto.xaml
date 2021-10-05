@@ -44,7 +44,7 @@
             <usercontrols:UCTextbox Grid.Row="3" Grid.Column="1"></usercontrols:UCTextbox>
 
             <Label Grid.Row="4" Grid.Column="0" Content="RFC*"></Label>
-            <usercontrols:UCTextbox Grid.Row="4" Grid.Column="1"></usercontrols:UCTextbox>
+            <usercontrols:UCTextboxRFC Grid.Row="4" Grid.Column="1"></usercontrols:UCTextboxRFC>
 
             <Label Grid.Row="5" Grid.Column="0" Content="Domicilio"></Label>
             

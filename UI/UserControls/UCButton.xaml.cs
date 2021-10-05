@@ -28,7 +28,20 @@ namespace UI.UserControls
 
             this.MouseEnter += UCOpcionMenu_MouseEnter;
             this.MouseLeave += UCOpcionMenu_MouseLeave;
+            this.MouseUp += UCButton_MouseUp;
         }
+
+        private void UCButton_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if(UCClick != null)
+            {
+                UCClick(this);
+            }
+        }
+
+        public delegate void _UCClick(UCButton uc);
+        public event _UCClick UCClick; 
+
 
         public FontAwesomeSolidIcon? UCIcon { get { return icon.SolidIcon; } set { icon.SolidIcon = value; } }
         public String UCText { get { return lblOpcion.Content.ToString(); } set { lblOpcion.Content = value; } }

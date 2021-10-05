@@ -63,6 +63,12 @@
     <Compile Include="UserControls\UCOpcionMenu.xaml.cs">
       <DependentUpon>UCOpcionMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCPassword.xaml.cs">
+      <DependentUpon>UCPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTextboxRFC.xaml.cs">
+      <DependentUpon>UCTextboxRFC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCTextbox.xaml.cs">
       <DependentUpon>UCTextbox.xaml</DependentUpon>
     </Compile>
@@ -79,6 +85,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UCOpcionMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UCPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UCTextboxRFC.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

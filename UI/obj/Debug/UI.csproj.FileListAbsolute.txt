@@ -46,3 +46,7 @@ C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserContro
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\UCTextbox.baml
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\UCButton.g.cs
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\UCButton.baml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\UCPassword.g.cs
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\UCPassword.baml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\UCTextboxRFC.g.cs
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\UI\obj\Debug\UserControls\UCTextboxRFC.baml

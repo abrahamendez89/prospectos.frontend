@@ -12,6 +12,7 @@
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Rectangle Grid.ColumnSpan="3" Fill="#FFEDF5F5" RadiusY="2.333" RadiusX="2.333" Margin="2"></Rectangle>
         <Label x:Name="lblNombreDocumento" Grid.Column="0" Content="Nombre Documento" VerticalAlignment="Center"></Label>
         <usercontrols:UCButton x:Name="btnCargar" Grid.Column="1" Margin="2" UCText="Cargar" UCIcon="Upload"></usercontrols:UCButton>
         <usercontrols:UCButton x:Name="btnDescargar" Grid.Column="2" Margin="2" UCText="Descargar" UCIcon="Download"></usercontrols:UCButton>
