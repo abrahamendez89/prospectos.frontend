@@ -33,7 +33,7 @@ namespace UI.UserControls
 
         private void UCButton_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if(UCClick != null)
+            if(UCClick != null && isEnabled)
             {
                 UCClick(this);
             }
@@ -45,15 +45,35 @@ namespace UI.UserControls
 
         public FontAwesomeSolidIcon? UCIcon { get { return icon.SolidIcon; } set { icon.SolidIcon = value; } }
         public String UCText { get { return lblOpcion.Content.ToString(); } set { lblOpcion.Content = value; } }
+        private Boolean isEnabled = true;
+        public Boolean UCIsEnabled { get { return isEnabled; } set 
+            { 
+                isEnabled = value; 
+                if (!isEnabled) 
+                { 
+                    rectangle.Fill = UCUtils.ConvertHEXToBrush("#FFFFFFFF");
+                    lblOpcion.Foreground = UCUtils.ConvertHEXToBrush("#FFB2B2B2");
+                    icon.Foreground = UCUtils.ConvertHEXToBrush("#FFB2B2B2");
+                }
+                else
+                {
+                    rectangle.Fill = UCUtils.ConvertHEXToBrush("#FFE0E0E0");
+                    lblOpcion.Foreground = UCUtils.ConvertHEXToBrush("#FF000000");
+                    icon.Foreground = UCUtils.ConvertHEXToBrush("#FF000000");
+                }
+            }
+        }
 
         private void UCOpcionMenu_MouseLeave(object sender, MouseEventArgs e)
         {
+            if (!isEnabled) return;
             rectangle.Fill = UCUtils.ConvertHEXToBrush("#FFE0E0E0");
             this.Cursor = Cursors.Arrow;
         }
 
         private void UCOpcionMenu_MouseEnter(object sender, MouseEventArgs e)
         {
+            if (!isEnabled) return;
             rectangle.Fill = UCUtils.ConvertHEXToBrush("#FF86CFEA");
             this.Cursor = Cursors.Hand;
         }

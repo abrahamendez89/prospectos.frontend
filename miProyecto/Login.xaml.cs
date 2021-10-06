@@ -35,6 +35,7 @@ namespace miProyecto
             Usuario userBody = new Usuario();
             userBody.usuario_usuario = txtUser.UCText;
             userBody.usuario_contrasena = txtPassword.UCPasswordText;
+            userBody.DCValidate();
             try
             {
                 Token token = await httpHelper.Post<Token, Usuario>("login", userBody);

@@ -23,6 +23,26 @@ namespace miProyecto.UCVentanas
         public UCCapturaProspecto()
         {
             InitializeComponent();
+            btnAgregarDocumento.UCClick += BtnAgregarDocumento_UCClick;
+        }
+
+        private void BtnAgregarDocumento_UCClick(UI.UserControls.UCButton uc)
+        {
+            UCCapturaProspectoDocumento ucDocumento = new UCCapturaProspectoDocumento();
+            ucDocumento.UCFileName = "Seleccione un archivo";
+            ucDocumento.UCSelectedFile += UcDocumento_UCSelectedFile;
+            ucDocumento.UCDownloadFileClick += UcDocumento_UCDownloadFileClick;
+            spDocumentos.Children.Add(ucDocumento);
+        }
+
+        private void UcDocumento_UCDownloadFileClick(string filename, string base64File)
+        {
+            
+        }
+
+        private void UcDocumento_UCSelectedFile(string filename, string base64File)
+        {
+            
         }
     }
 }

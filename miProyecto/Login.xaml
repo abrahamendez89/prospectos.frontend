@@ -32,7 +32,7 @@
             <Label Grid.Column="0" Grid.Row="1" Content="Contraseña:" HorizontalAlignment="Left" Margin="5" />
             <usercontrols:UCTextbox x:Name="txtUser" Grid.Column="1" Grid.Row="0" Margin="5" UCText="abraham"></usercontrols:UCTextbox>
             <usercontrols:UCPassword x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Margin="5" UCPasswordText="contrasena"></usercontrols:UCPassword >
-            <usercontrols:UCButton Grid.Column="1" Grid.Row="2" Margin="20,5,5,5" x:Name="btnEntrar" UCText="Entrar" UCIcon="Key" Width="100" HorizontalAlignment="Right"></usercontrols:UCButton>
+            <usercontrols:UCButton Grid.Column="1" Grid.Row="2" Margin="20,5,5,5" x:Name="btnEntrar" UCText="Entrar" UCIcon="Key" Width="100" HorizontalAlignment="Right" UCIsEnabled="true"></usercontrols:UCButton>
         </Grid>
 
 

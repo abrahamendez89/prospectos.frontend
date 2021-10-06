@@ -4,8 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:miProyecto.UCVentanas" xmlns:usercontrols="clr-namespace:UI.UserControls;assembly=UI"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" >
     <Grid Background="Beige" Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -14,6 +13,8 @@
         <Label Grid.Row="0" Content="Captura de prospectos:" FontSize="20"></Label>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
@@ -35,37 +36,39 @@
             <Label Grid.Row="0" Grid.Column="0" Content="Datos personales"></Label>
             
             <Label Grid.Row="1" Grid.Column="0" Content="Nombre(s)*"></Label>
-            <usercontrols:UCTextbox Grid.Row="1" Grid.Column="1" UCIsValid="False"></usercontrols:UCTextbox>
+            <usercontrols:UCTextbox x:Name="txtNombre" Grid.Row="1" Grid.Column="1"></usercontrols:UCTextbox>
 
             <Label Grid.Row="2" Grid.Column="0" Content="Apellido Paterno*"></Label>
-            <usercontrols:UCTextbox Grid.Row="2" Grid.Column="1"></usercontrols:UCTextbox>
+            <usercontrols:UCTextbox x:Name="txtApPat" Grid.Row="2" Grid.Column="1"></usercontrols:UCTextbox>
 
             <Label Grid.Row="3" Grid.Column="0" Content="Apellido Materno*"></Label>
-            <usercontrols:UCTextbox Grid.Row="3" Grid.Column="1"></usercontrols:UCTextbox>
+            <usercontrols:UCTextbox x:Name="txtApMat" Grid.Row="3" Grid.Column="1"></usercontrols:UCTextbox>
 
             <Label Grid.Row="4" Grid.Column="0" Content="RFC*"></Label>
-            <usercontrols:UCTextboxRFC Grid.Row="4" Grid.Column="1"></usercontrols:UCTextboxRFC>
+            <usercontrols:UCTextboxRFC x:Name="txtRFC" Grid.Row="4" Grid.Column="1"></usercontrols:UCTextboxRFC>
 
             <Label Grid.Row="5" Grid.Column="0" Content="Domicilio"></Label>
             
             <Label Grid.Row="6" Grid.Column="0" Content="Calle*"></Label>
-            <usercontrols:UCTextbox Grid.Row="6" Grid.Column="1"></usercontrols:UCTextbox>
+            <usercontrols:UCTextbox x:Name="txtCalle" Grid.Row="6" Grid.Column="1"></usercontrols:UCTextbox>
 
             <Label Grid.Row="7" Grid.Column="0" Content="Número*"></Label>
-            <usercontrols:UCTextbox Grid.Row="7" Grid.Column="1"></usercontrols:UCTextbox>
+            <usercontrols:UCTextbox x:Name="txtNumero" Grid.Row="7" Grid.Column="1" UCIsANumber="True"></usercontrols:UCTextbox>
 
             <Label Grid.Row="8" Grid.Column="0" Content="Colonia*"></Label>
-            <usercontrols:UCTextbox Grid.Row="8" Grid.Column="1"></usercontrols:UCTextbox>
+            <usercontrols:UCTextbox x:Name="txtColonia" Grid.Row="8" Grid.Column="1"></usercontrols:UCTextbox>
 
             <Label Grid.Row="9" Grid.Column="0" Content="Código Postal*"></Label>
-            <usercontrols:UCTextbox Grid.Row="9" Grid.Column="1"></usercontrols:UCTextbox>
+            <usercontrols:UCTextbox x:Name="txtCodigoPostal" Grid.Row="9" Grid.Column="1" UCIsANumber="True"></usercontrols:UCTextbox>
 
-            <Label Grid.Row="10" Grid.Column="0" Content="Documentos"></Label>
+            <Label Grid.Row="10" Grid.Column="0" Content="Teléfono*"></Label>
+            <usercontrols:UCTextbox x:Name="txtTelefono" Grid.Row="10" Grid.Column="1" UCIsANumber="True"></usercontrols:UCTextbox>
 
-            <StackPanel x:Name="spDocumentos" Grid.Row="11" Grid.Column="1">
-                <local:UCCapturaProspectoDocumento></local:UCCapturaProspectoDocumento>
-                <local:UCCapturaProspectoDocumento></local:UCCapturaProspectoDocumento>
-                <local:UCCapturaProspectoDocumento></local:UCCapturaProspectoDocumento>
+            <Label Grid.Row="11" Grid.Column="0" Content="Documentos"></Label>
+
+            <usercontrols:UCButton x:Name="btnAgregarDocumento" Grid.Row="12" Width="180" Grid.Column="1" UCText="Agregar Documento" UCIcon="Plus" HorizontalAlignment="Right"></usercontrols:UCButton>
+
+            <StackPanel x:Name="spDocumentos" Grid.Row="13" Grid.Column="1">
             </StackPanel>
             
 
