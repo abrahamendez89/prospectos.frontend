@@ -32,6 +32,9 @@ namespace miProyecto.UCVentanas
         public String UCFileName { get { return lblNombreDocumento.Content.ToString(); } set { lblNombreDocumento.Content = value; } }
         public String UCBase64File { get; set; }
 
+        private Boolean isReadOnly;
+        public Boolean UCIsReadOnly { get { return isReadOnly; } set { isReadOnly = value; if (isReadOnly) { btnCargar.Visibility = Visibility.Collapsed; } else { btnCargar.Visibility = Visibility.Visible; } } }
+
         public UCCapturaProspectoDocumento()
         {
             InitializeComponent();

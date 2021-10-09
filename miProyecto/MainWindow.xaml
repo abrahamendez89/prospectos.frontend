@@ -7,30 +7,22 @@
         xmlns:UCVent="clr-namespace:miProyecto.UCVentanas"
         xmlns:UserControls="clr-namespace:UI.UserControls;assembly=UI" x:Class="miProyecto.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Prospectos - ConCredito" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <StackPanel x:Name="spAcciones" Grid.Row="0" HorizontalAlignment="Right" Orientation="Horizontal" Margin="5" ></StackPanel>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid Margin="5">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                    <RowDefinition Height="auto"></RowDefinition>
-                </Grid.RowDefinitions>
-                <StackPanel x:Name="spOpciones">
-                </StackPanel>
-            </Grid>
-            <Grid Grid.Column="1" x:Name="grdContenedor">
-                <ScrollViewer x:Name="scViewer">
-                </ScrollViewer>
-            </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="spOpciones">
+            </StackPanel>
         </Grid>
+        <UCVent:UCContenedor x:Name="contenedor" Grid.Column="1">
+
+        </UCVent:UCContenedor>
     </Grid>
 </Window>

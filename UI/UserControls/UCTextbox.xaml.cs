@@ -63,6 +63,10 @@ namespace UI.UserControls
             }
         }
 
+        private Boolean isReadOnly;
+        public Boolean UCIsReadOnly { get { return isReadOnly; } set { isReadOnly = value; txt.IsReadOnly = isReadOnly; } }
+
+
         private Boolean isValid = true;
         public Boolean UCIsValid { get { return isValid; } set { isValid = value; if (!isValid) { rectangle.Stroke = Brushes.Red; label.Visibility = Visibility.Visible; } else { rectangle.Stroke = Brushes.Black; label.Visibility = Visibility.Collapsed; } } }
         public Boolean UCIsANumber { get; set; }

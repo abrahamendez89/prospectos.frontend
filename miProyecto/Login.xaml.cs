@@ -41,6 +41,7 @@ namespace miProyecto
                 userBody.DCValidate();
                 Token token = await us.PostLogin(userBody);
                 Storage.Token = token.token;
+                Storage.Rol = token.rol;
 
                 MainWindow mw = new MainWindow();
                 mw.Show();
