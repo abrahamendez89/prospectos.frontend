@@ -24,7 +24,7 @@ namespace utilities
                 {
                     return await response.Content.ReadAsAsync<T>();
                 }
-                throw new CustomHttpException(this.GetType().BaseType.Name, "Get", "Http error: " + response.StatusCode.ToString(), response.StatusCode);
+                throw new Exception("Http error [GET("+ response.StatusCode + ")]: " + response.StatusCode.ToString());
 
             }
         }
@@ -36,13 +36,13 @@ namespace utilities
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                //GET Method
+                
                 HttpResponseMessage response = await client.PostAsJsonAsync(path, bodyJson);
                 if (response.IsSuccessStatusCode)
                 {
                     return await response.Content.ReadAsAsync<T>();
                 }
-                throw new CustomHttpException(this.GetType().BaseType.Name, "Post", "Http error: " + response.StatusCode.ToString(), response.StatusCode);
+                throw new Exception("Http error [POST(" + response.StatusCode + ")]: " + response.StatusCode.ToString());
 
             }
         }

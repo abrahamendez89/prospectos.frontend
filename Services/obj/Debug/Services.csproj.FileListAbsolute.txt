@@ -1,0 +1,15 @@
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Services.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Services.pdb
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Domain.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Utilities.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Newtonsoft.Json.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Domain.pdb
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Utilities.pdb
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\bin\Debug\Newtonsoft.Json.xml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\obj\Debug\Services.csprojAssemblyReference.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\obj\Debug\Services.csproj.CopyComplete
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\obj\Debug\Services.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Services\obj\Debug\Services.pdb

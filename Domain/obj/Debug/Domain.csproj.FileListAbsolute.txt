@@ -4,3 +4,16 @@ C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.csprojAssemblyRef
 C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.dll
 C:\Users\abrah\source\repos\miProyecto\Domain\obj\Debug\Domain.pdb
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\Domain.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\Domain.pdb
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\Utilities.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\Utilities.pdb
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\obj\Debug\Domain.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\Domain\obj\Debug\Domain.pdb

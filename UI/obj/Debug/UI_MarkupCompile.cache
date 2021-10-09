@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-2191209771
+71389725650
 
-6-1067274962
-14183637641
-UserControls\NavBar.xaml;UserControls\NavBarButton.xaml;
+11291950735
+151085855521
+UserControls\UCButton.xaml;UserControls\UCNavBar.xaml;UserControls\UCNavBarButton.xaml;UserControls\UCOpcionMenu.xaml;UserControls\UCPassword.xaml;UserControls\UCTextboxRFC.xaml;UserControls\UCTextbox.xaml;
 
-True
+False
 
