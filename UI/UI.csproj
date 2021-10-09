@@ -51,6 +51,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UIHelper.cs" />
     <Compile Include="UserControls\UCButton.xaml.cs">
       <DependentUpon>UCButton.xaml</DependentUpon>
     </Compile>

@@ -13,7 +13,7 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <UserControls:UCNavBar Grid.Row="0" HorizontalAlignment="Right"></UserControls:UCNavBar>
+        <StackPanel x:Name="spAcciones" Grid.Row="0" HorizontalAlignment="Right" Orientation="Horizontal" Margin="5" ></StackPanel>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -24,14 +24,11 @@
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                <StackPanel>
-                    <UserControls:UCOpcionMenu></UserControls:UCOpcionMenu>
-                    <UserControls:UCOpcionMenu></UserControls:UCOpcionMenu>
+                <StackPanel x:Name="spOpciones">
                 </StackPanel>
             </Grid>
             <Grid Grid.Column="1" x:Name="grdContenedor">
-                <ScrollViewer>
-                    <UCVent:UCCapturaProspecto></UCVent:UCCapturaProspecto>
+                <ScrollViewer x:Name="scViewer">
                 </ScrollViewer>
             </Grid>
         </Grid>

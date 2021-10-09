@@ -9,7 +9,9 @@ namespace Utilities.Domain
     [AttributeUsage(AttributeTargets.Property)]
     public class DCValidateCondition : Attribute
     {
-        public int StringSize { get; set; }
+        public Boolean IsRequired { get; set; }
+        public int StringMinSize { get; set; }
+        public int StringMaxSize { get; set; }
         public int IntMaxValue { get; set; }
         public int IntMinValue { get; set; }
     }

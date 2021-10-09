@@ -45,6 +45,7 @@ namespace UI.UserControls
 
         public FontAwesomeSolidIcon? UCIcon { get { return icon.SolidIcon; } set { icon.SolidIcon = value; } }
         public String UCText { get { return lblOpcion.Content.ToString(); } set { lblOpcion.Content = value; } }
+        public String UCAction { get; set; }
         private Boolean isEnabled = true;
         public Boolean UCIsEnabled { get { return isEnabled; } set 
             { 

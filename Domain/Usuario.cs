@@ -9,9 +9,11 @@ namespace Domain
 {
     public class Usuario:DomainObject
     {
-        [DCValidateCondition(StringSize = 5)]
+        [DCValidateCondition(StringMaxSize = 45)]
         public String usuario_usuario { get; set; }
+        [DCValidateCondition(StringMaxSize = 45)]
         public String usuario_contrasena { get; set; }
+        [DCValidateCondition(StringMaxSize = 45)]
         public String usuario_rol { get; set; }
     }
 }

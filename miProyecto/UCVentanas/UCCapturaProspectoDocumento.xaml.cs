@@ -22,10 +22,10 @@ namespace miProyecto.UCVentanas
     /// </summary>
     public partial class UCCapturaProspectoDocumento : UserControl
     {
-        public delegate void _UCSelectedFile(String filename, String base64File);
+        public delegate void _UCSelectedFile(UCCapturaProspectoDocumento uc);
         public event _UCSelectedFile UCSelectedFile;
 
-        public delegate void _UCDownloadFileClick(String filename, String base64File);
+        public delegate void _UCDownloadFileClick(UCCapturaProspectoDocumento uc);
         public event _UCDownloadFileClick UCDownloadFileClick;
 
 
@@ -41,25 +41,35 @@ namespace miProyecto.UCVentanas
 
         private void BtnDescargar_UCClick(UI.UserControls.UCButton uc)
         {
-            if (UCDownloadFileClick == null)
+            if (UCBase64File != null && UCFileName != null)
             {
-                throw new Exception("Es necesario asignar el evento UCDownloadFileClick para descargar el archivo del servidor.");
-            }
-            if (UCBase64File == null)
-            {
-                UCDownloadFileClick(UCFileName, UCBase64File);
-                if (UCFileName == null || UCBase64File == null)
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.FileName = UCFileName;
+
+                if (saveFileDialog.ShowDialog() == true)
                 {
-                    throw new Exception("Es necesario asignar las propiedades UCFileName y UCBase64File con los datos de descarga del servidor..");
+                    FileHelper.Base64StringToFile(UCBase64File, saveFileDialog.FileName);
+
+                    if (UCSelectedFile != null)
+                    {
+                        UCSelectedFile(this);
+                    }
                 }
             }
-            else
+            if (UCBase64File == null && UCFileName != null)
             {
-                UCDownloadFileClick(UCFileName, UCBase64File);
+
+                if (UCDownloadFileClick == null)
+                {
+                    throw new Exception("Es necesario asignar el evento UCDownloadFileClick para descargar el archivo del servidor.");
+                }
+                UCDownloadFileClick(this);
             }
-
         }
-
+        public void UCToFile()
+        {
+            BtnDescargar_UCClick(null);
+        }
         private void BtnCargar_UCClick(UI.UserControls.UCButton uc)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -71,7 +81,7 @@ namespace miProyecto.UCVentanas
                 UCFileName = fileName;
                 if (UCSelectedFile != null)
                 {
-                    UCSelectedFile(fileName, base64File);
+                    UCSelectedFile(this);
                 }
             }
 

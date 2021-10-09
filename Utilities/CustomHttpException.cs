@@ -19,7 +19,6 @@ namespace utilities
             this.HttpCode = httpCode;
             this.Message = Message;
             this.StackTrace = ex?.StackTrace;
-            
             //aqui meter reflection para copiar un objeto a otro
         }
     }

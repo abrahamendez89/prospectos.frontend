@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,10 @@ namespace miProyecto
     /// </summary>
     public partial class Login : Window
     {
-        Httphelper httpHelper = new Httphelper();
+        UsuarioService us = new UsuarioService();
         public Login()
         {
             InitializeComponent();
-            httpHelper.BaseURI = new Uri(@"http://localhost:3000/");
             btnEntrar.UCClick += BtnEntrar_UCClick;
         }
 
@@ -35,10 +35,11 @@ namespace miProyecto
             Usuario userBody = new Usuario();
             userBody.usuario_usuario = txtUser.UCText;
             userBody.usuario_contrasena = txtPassword.UCPasswordText;
-            userBody.DCValidate();
+            
             try
             {
-                Token token = await httpHelper.Post<Token, Usuario>("login", userBody);
+                userBody.DCValidate();
+                Token token = await us.PostLogin(userBody);
                 Storage.Token = token.token;
 
                 MainWindow mw = new MainWindow();
@@ -46,10 +47,10 @@ namespace miProyecto
                 this.Close();
 
             }
-            catch (CustomHttpException ce)
+            catch (Exception ce)
             {
 
-                MessageBox.Show("Usuario y/o Contraseña incorrectos", "Acceso " + ce.HttpCode, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                MessageBox.Show(ce.Message, "Acceso ", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
     }

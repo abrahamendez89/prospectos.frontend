@@ -28,6 +28,11 @@ namespace UI.UserControls
             txt.KeyUp += Txt_KeyUp;
         }
 
+        public void UCValidate()
+        {
+            Txt_LostFocus(null, null);
+        }
+
         private void Txt_KeyUp(object sender, KeyEventArgs e)
         {
             int index = Int32.Parse(e.OriginalSource.GetType().GetProperty("CaretIndex").GetValue(e.OriginalSource).ToString());
@@ -37,6 +42,21 @@ namespace UI.UserControls
 
         private void Txt_LostFocus(object sender, RoutedEventArgs e)
         {
+
+            if (this.UCIsRequired)
+            {
+                if (this.txt.Text.Trim().Length == 0)
+                {
+                    this.UCIsValid = false;
+                    this.ToolTip = "Dato Requerido";
+                }
+                else
+                {
+                    this.UCIsValid = true;
+                    this.ToolTip = null;
+                }
+            }
+
             Regex regex = new Regex(@"^([A-ZÑ\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))((-)?([A-Z\d]{3}))?$");
             Match match = regex.Match(txt.Text);
             if (!match.Success)
@@ -53,7 +73,7 @@ namespace UI.UserControls
 
         private Boolean isValid = true;
         public Boolean UCIsValid { get { return isValid; } set { isValid = value; if (!isValid) { rectangle.Stroke = Brushes.Red; label.Visibility = Visibility.Visible; } else { rectangle.Stroke = Brushes.Black; label.Visibility = Visibility.Collapsed; } } }
-        
+        public Boolean UCIsRequired { get; set; }
         public String UCText { get { return txt.Text; } set { txt.Text = value; } }
     }
 }

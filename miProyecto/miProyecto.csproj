@@ -137,6 +137,10 @@
       <Project>{bef29ae6-3070-46c1-9282-a42dd23fbdd7}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{ef91e3de-6e27-4345-ab3a-d2683991690a}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UI\UI.csproj">
       <Project>{98a8610f-6a6c-4fbf-8fdc-028825b63746}</Project>
       <Name>UI</Name>

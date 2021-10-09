@@ -21,5 +21,9 @@ namespace Utilities
         {
             return System.IO.Path.GetFileName(path); 
         }
+        public static void Base64StringToFile(String base64, String path)
+        {
+            File.WriteAllBytes(path, Convert.FromBase64String(base64));
+        }
     }
 }

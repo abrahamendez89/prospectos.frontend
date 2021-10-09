@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Services
 {
-    public class ProspectoService
+    public abstract class Constants
     {
+        public static readonly String BACKEND_URL = @"http://localhost:3000/";
     }
 }

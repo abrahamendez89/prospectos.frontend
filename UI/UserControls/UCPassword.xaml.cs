@@ -24,6 +24,7 @@ namespace UI.UserControls
         {
             InitializeComponent();
         }
+
         private Boolean isValid = true;
         public Boolean UCIsValid { get { return isValid; } set { isValid = value; if (!isValid) { rectangle.Stroke = Brushes.Red; label.Visibility = Visibility.Visible; } else { rectangle.Stroke = Brushes.Black; label.Visibility = Visibility.Collapsed; } } }
         

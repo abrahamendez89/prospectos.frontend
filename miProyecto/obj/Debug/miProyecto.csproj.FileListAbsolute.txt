@@ -62,6 +62,7 @@ C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\obj\Debug\mi
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\obj\Debug\miProyecto.pdb
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\obj\Debug\UCVentanas\UCCapturaProspecto.g.cs
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\obj\Debug\UCVentanas\UCCapturaProspectoDocumento.g.cs
-C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\obj\Debug\UCVentanas\UCCapturaProspecto.baml
 C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\obj\Debug\UCVentanas\UCCapturaProspectoDocumento.baml
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\bin\Debug\Services.dll
+C:\Users\abrah\Documents\Proyecto CC\prospectos.frontend\miProyecto\bin\Debug\Services.pdb

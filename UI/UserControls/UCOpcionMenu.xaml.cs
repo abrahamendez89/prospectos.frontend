@@ -21,12 +21,27 @@ namespace UI.UserControls
     /// </summary>
     public partial class UCOpcionMenu : UserControl
     {
+
+        public delegate void _UCClick(UCOpcionMenu uc);
+        public event _UCClick UCClick;
+
+        public String UCText { get { return lblOpcion.Content.ToString(); } set { lblOpcion.Content = value; } }
+        public Type UCUserControl { get; set; }
+
         public UCOpcionMenu()
         {
             InitializeComponent();
             this.MouseEnter += UCOpcionMenu_MouseEnter;
             this.MouseLeave += UCOpcionMenu_MouseLeave;
-            
+            this.MouseUp += UCOpcionMenu_MouseUp;
+        }
+
+        private void UCOpcionMenu_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            if(UCClick != null)
+            {
+                UCClick(this);
+            }
         }
 
         private void UCOpcionMenu_MouseLeave(object sender, MouseEventArgs e)

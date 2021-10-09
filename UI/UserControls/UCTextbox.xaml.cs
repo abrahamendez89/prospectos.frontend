@@ -27,21 +27,38 @@ namespace UI.UserControls
             txt.LostFocus += Txt_LostFocus;
         }
 
+        public void UCValidate()
+        {
+            Txt_LostFocus(null, null);
+        }
+
         private void Txt_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (UCIsANumber)
+            if (this.UCIsRequired)
             {
-                Regex regex = new Regex(@"^\d$");
-                Match match = regex.Match(txt.Text);
-                if (!match.Success)
+                if(this.txt.Text.Trim().Length == 0)
                 {
                     this.UCIsValid = false;
-                    this.ToolTip = "Debe ser un Número";
+                    this.ToolTip = "Dato Requerido";
                 }
                 else
                 {
                     this.UCIsValid = true;
                     this.ToolTip = null;
+                }
+            }
+            if (UCIsANumber)
+            {
+                try
+                {
+                    Int64.Parse(txt.Text);
+                    this.UCIsValid = true;
+                    this.ToolTip = null;
+                }
+                catch
+                {
+                    this.UCIsValid = false;
+                    this.ToolTip = "Debe ser un Número";
                 }
             }
         }
@@ -50,5 +67,6 @@ namespace UI.UserControls
         public Boolean UCIsValid { get { return isValid; } set { isValid = value; if (!isValid) { rectangle.Stroke = Brushes.Red; label.Visibility = Visibility.Visible; } else { rectangle.Stroke = Brushes.Black; label.Visibility = Visibility.Collapsed; } } }
         public Boolean UCIsANumber { get; set; }
         public String UCText { get { return txt.Text; } set { txt.Text = value; } }
+        public Boolean UCIsRequired { get; set; }
     }
 }
