@@ -9,5 +9,6 @@ namespace Utilities
     public class Storage
     {
         public static String Token;
+        public static String Rol;
     }
 }

@@ -53,7 +53,8 @@ namespace miProyecto.UCVentanas
             }
         }
 
-        public async void Action_Save_Guardar_Prospecto()
+        [UCActionHelper(UCRol = "Promotor", UCIcon = Meziantou.WpfFontAwesome.FontAwesomeSolidIcon.Save, UCNombreAccion = "Guardar Prospecto") ]
+        public async void guardarProspecto()
         {
             try
             {

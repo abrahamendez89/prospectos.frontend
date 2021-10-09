@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UI;
 using UI.UserControls;
 
 namespace miProyecto
@@ -47,30 +48,23 @@ namespace miProyecto
             btnSalir.UCText = "Salir";
             btnSalir.UCIcon = Meziantou.WpfFontAwesome.FontAwesomeSolidIcon.PowerOff;
             btnSalir.UCClick += BtnSalir_UCClick;
-            
+
             foreach (MethodInfo mi in ucontrol.GetType().GetMethods(BindingFlags.Public | BindingFlags.Instance))
             {
-                if (mi.Name.StartsWith("Action_"))
+                foreach (Attribute at in mi.GetCustomAttributes())
                 {
-                    String nombreMetodo = mi.Name.Replace("Action_", "");
-                    String icon = nombreMetodo.Split('_')[0];
-                    String nombreAccion = nombreMetodo.Replace(icon + "_", "").Replace("_", " ");
-
-                    UCButton uCB = new UCButton();
-                    uCB.UCText = nombreAccion;
-                    uCB.UCAction = mi.Name;
-                    try
+                    if (at.GetType() == typeof(UCActionHelper))
                     {
-                        uCB.UCIcon = (Meziantou.WpfFontAwesome.FontAwesomeSolidIcon)Enum.Parse(typeof(Meziantou.WpfFontAwesome.FontAwesomeSolidIcon), icon);
-                    }
-                    catch
-                    {
-                        uCB.UCIcon = Meziantou.WpfFontAwesome.FontAwesomeSolidIcon.Link;
-                    }
-                    uCB.UCClick += UCB_UCClick;
+                        UCActionHelper ah = (UCActionHelper)at;
 
-                    spAcciones.Children.Add(uCB);
+                        if(ah.UCRol.Equals())
 
+                        UCButton uCB = new UCButton();
+                        uCB.UCText = ah.UCNombreAccion;
+                        uCB.UCClick += UCB_UCClick;
+
+                        spAcciones.Children.Add(uCB);
+                    }
                 }
             }
 
@@ -84,7 +78,7 @@ namespace miProyecto
                 this.spAcciones.Children.Clear();
                 this.scViewer.Content = null;
             }
-            
+
         }
 
         private void UCB_UCClick(UCButton uc)
