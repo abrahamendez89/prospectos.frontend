@@ -30,12 +30,39 @@ namespace Services
             }
             return p;
         }
-        public async Task<Prospecto> PostProspecto(ProspectoWrapper pw)
+        public async Task<List<Prospecto>> GetProspectos()
+        {
+            List<Prospecto> p = null;
+            try
+            {
+                p = await hh.Get<List<Prospecto>>("prospecto", Storage.Token);
+
+            }
+            catch (CustomHttpException ce)
+            {
+                throw ce;
+            }
+            return p;
+        }
+        public async Task<Prospecto> PostProspectoWrapper(ProspectoWrapper pw)
         {
             Prospecto p = null;
             try
             {
-                p = await hh.Post<Prospecto, ProspectoWrapper>("prospecto", pw, Storage.Token);
+                p = await hh.Post<Prospecto, ProspectoWrapper>("prospectow", pw, Storage.Token);
+
+            }
+            catch (CustomHttpException ce)
+            {
+                throw ce;
+            }
+            return p;
+        }
+        public async Task<Prospecto> PostProspecto(Prospecto p)
+        {
+            try
+            {
+                p = await hh.Post<Prospecto, Prospecto>("prospecto", p, Storage.Token);
 
             }
             catch (CustomHttpException ce)

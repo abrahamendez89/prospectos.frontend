@@ -31,6 +31,18 @@ namespace UI
             }
         }
 
+        public static void UCSetReadOnly(UserControl uc)
+        {
+            foreach (UCTextboxRFC userControl in FindVisualChildren<UCTextboxRFC>(uc))
+            {
+                userControl.UCIsReadOnly = true;
+            }
+            foreach (UCTextbox userControl in FindVisualChildren<UCTextbox>(uc))
+            {
+                userControl.UCIsReadOnly = true;
+            }
+        }
+
         public static void UCClear(UserControl uc)
         {
             foreach (UCTextboxRFC userControl in FindVisualChildren<UCTextboxRFC>(uc))

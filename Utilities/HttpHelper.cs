@@ -24,7 +24,7 @@ namespace utilities
                 {
                     return await response.Content.ReadAsAsync<T>();
                 }
-                throw new Exception("Http error [GET("+ response.StatusCode + ")]: " + response.StatusCode.ToString());
+                throw new Exception("Http error [GET("+ path + ")]: " + response.StatusCode.ToString());
 
             }
         }
@@ -42,7 +42,7 @@ namespace utilities
                 {
                     return await response.Content.ReadAsAsync<T>();
                 }
-                throw new Exception("Http error [POST(" + response.StatusCode + ")]: " + response.StatusCode.ToString());
+                throw new Exception("Http error [POST(" + path + ")]: " + response.StatusCode.ToString());
 
             }
         }

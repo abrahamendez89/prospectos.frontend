@@ -70,6 +70,16 @@
     <Compile Include="UCVentanas\UCCapturaProspectoDocumento.xaml.cs">
       <DependentUpon>UCCapturaProspectoDocumento.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UCVentanas\UCContenedor.xaml.cs">
+      <DependentUpon>UCContenedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCVentanas\UCHelper.cs" />
+    <Compile Include="UCVentanas\UCListadoProspectos.xaml.cs">
+      <DependentUpon>UCListadoProspectos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCVentanas\UCObservaciones.xaml.cs">
+      <DependentUpon>UCObservaciones.xaml</DependentUpon>
+    </Compile>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +108,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UCVentanas\UCCapturaProspectoDocumento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCVentanas\UCContenedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCVentanas\UCListadoProspectos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCVentanas\UCObservaciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

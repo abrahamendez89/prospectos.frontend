@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UI;
 using UI.UserControls;
+using Utilities;
 
 namespace miProyecto
 {
@@ -28,71 +29,32 @@ namespace miProyecto
         {
             InitializeComponent();
 
+            if (Storage.Rol.Equals("Promotor"))
+            {
+                UCOpcionMenu om = new UCOpcionMenu();
+                om.UCText = "Captura Prospectos";
+                om.UCUserControl = typeof(UCCapturaProspecto);
+                om.UCClick += Om_UCClick;
+                this.spOpciones.Children.Add(om);
 
-            UCOpcionMenu om = new UCOpcionMenu();
-            om.UCText = "Captura Prospectos";
-            om.UCUserControl = typeof(UCCapturaProspecto);
-            om.UCClick += Om_UCClick;
+            }
+            if (Storage.Rol.Equals("Validador") || Storage.Rol.Equals("Promotor"))
+            {
+                UCOpcionMenu om2 = new UCOpcionMenu();
+                om2.UCText = "Lista Prospectos";
+                om2.UCUserControl = typeof(UCListadoProspectos);
+                om2.UCClick += Om_UCClick;
+                this.spOpciones.Children.Add(om2);
+            }
+            
 
-            this.spOpciones.Children.Add(om);
         }
 
         private void Om_UCClick(UCOpcionMenu uc)
         {
             UserControl ucontrol = (UserControl)Activator.CreateInstance(uc.UCUserControl);
-            scViewer.Content = ucontrol;
-            spAcciones.Children.Clear();
-            //obteniendo actions del control
-
-            UCButton btnSalir = new UCButton();
-            btnSalir.UCText = "Salir";
-            btnSalir.UCIcon = Meziantou.WpfFontAwesome.FontAwesomeSolidIcon.PowerOff;
-            btnSalir.UCClick += BtnSalir_UCClick;
-
-            foreach (MethodInfo mi in ucontrol.GetType().GetMethods(BindingFlags.Public | BindingFlags.Instance))
-            {
-                foreach (Attribute at in mi.GetCustomAttributes())
-                {
-                    if (at.GetType() == typeof(UCActionHelper))
-                    {
-                        UCActionHelper ah = (UCActionHelper)at;
-
-                        if(ah.UCRol.Equals())
-
-                        UCButton uCB = new UCButton();
-                        uCB.UCText = ah.UCNombreAccion;
-                        uCB.UCClick += UCB_UCClick;
-
-                        spAcciones.Children.Add(uCB);
-                    }
-                }
-            }
-
-            spAcciones.Children.Add(btnSalir);
+            contenedor.agregarUC(ucontrol);
         }
 
-        private void BtnSalir_UCClick(UCButton uc)
-        {
-            if (MessageBox.Show("¿Está seguro que desea salir? Se perderán los cambios no guardados.", "Pregunta", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
-            {
-                this.spAcciones.Children.Clear();
-                this.scViewer.Content = null;
-            }
-
-        }
-
-        private void UCB_UCClick(UCButton uc)
-        {
-            try
-            {
-                MethodInfo voidMethodInfo = scViewer.Content.GetType().GetMethod(uc.UCAction);
-                voidMethodInfo.Invoke(scViewer.Content, null);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-
-        }
     }
 }

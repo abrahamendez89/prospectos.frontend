@@ -30,5 +30,8 @@ namespace Domain
         public String prospecto_RFC { get; set; }
         [DCValidateCondition(StringMaxSize = 45, IsRequired = true)]
         public String prospecto_estatus { get; set; }
+
+        [DCValidateCondition(StringMaxSize = 200)]
+        public String prospecto_observaciones { get; set; }
     }
 }
