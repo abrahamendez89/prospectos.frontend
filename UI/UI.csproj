@@ -51,17 +51,54 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserControls\NavBar.xaml.cs">
-      <DependentUpon>NavBar.xaml</DependentUpon>
+    <Compile Include="UCActionHelper.cs" />
+    <Compile Include="UIHelper.cs" />
+    <Compile Include="UserControls\UCButton.xaml.cs">
+      <DependentUpon>UCButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\NavBarButton.xaml.cs">
-      <DependentUpon>NavBarButton.xaml</DependentUpon>
+    <Compile Include="UserControls\UCNavBar.xaml.cs">
+      <DependentUpon>UCNavBar.xaml</DependentUpon>
     </Compile>
-    <Page Include="UserControls\NavBar.xaml">
+    <Compile Include="UserControls\UCNavBarButton.xaml.cs">
+      <DependentUpon>UCNavBarButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCOpcionMenu.xaml.cs">
+      <DependentUpon>UCOpcionMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPassword.xaml.cs">
+      <DependentUpon>UCPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTextboxRFC.xaml.cs">
+      <DependentUpon>UCTextboxRFC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTextbox.xaml.cs">
+      <DependentUpon>UCTextbox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\UCButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\NavBarButton.xaml">
+    <Page Include="UserControls\UCNavBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCNavBarButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCOpcionMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UCPassword.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UCTextboxRFC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UCTextbox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -89,6 +126,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{158b3608-7445-4351-9990-7933b51336e2}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

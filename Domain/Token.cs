@@ -9,5 +9,6 @@ namespace Domain
     public class Token
     {
         public String token { get; set; }
+        public String rol { get; set; }
     }
 }

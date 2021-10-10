@@ -34,6 +34,7 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -48,9 +49,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomHttpException.cs" />
+    <Compile Include="Domain\DCValidateCondition.cs" />
+    <Compile Include="Domain\DomainObject.cs" />
+    <Compile Include="FileHelper.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage.cs" />
+    <Compile Include="UCUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

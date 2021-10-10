@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,34 +23,36 @@ namespace miProyecto
     /// </summary>
     public partial class Login : Window
     {
-        Httphelper httpHelper = new Httphelper();
+        UsuarioService us = new UsuarioService();
         public Login()
         {
             InitializeComponent();
-            httpHelper.BaseURI = new Uri(@"http://localhost:3000/");
-            btnEntrar.Click += BtnEntrar_Click;
+            btnEntrar.UCClick += BtnEntrar_UCClick;
         }
 
-        private async void BtnEntrar_Click(object sender, RoutedEventArgs e)
+        private async void BtnEntrar_UCClick(UI.UserControls.UCButton uc)
         {
             Usuario userBody = new Usuario();
-            userBody.usuario_usuario = txtUser.Text;
-            userBody.usuario_contrasena = txtPassword.Password;
+            userBody.usuario_usuario = txtUser.UCText;
+            userBody.usuario_contrasena = txtPassword.UCPasswordText;
+            
             try
             {
-                Token token = await httpHelper.Post<Token, Usuario>("login", userBody);
+                userBody.DCValidate();
+                Token token = await us.PostLogin(userBody);
                 Storage.Token = token.token;
+                Storage.Rol = token.rol;
 
                 MainWindow mw = new MainWindow();
                 mw.Show();
                 this.Close();
 
-            }catch(CustomHttpException ce)
-            {
-                
-                MessageBox.Show("Usuario y/o Contraseña incorrectos", "Acceso "+ce.HttpCode, MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
-            
+            catch (Exception ce)
+            {
+
+                MessageBox.Show(ce.Message, "Acceso ", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
         }
     }
 }

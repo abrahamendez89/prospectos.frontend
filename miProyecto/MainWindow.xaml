@@ -4,14 +4,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:miProyecto"
+        xmlns:UCVent="clr-namespace:miProyecto.UCVentanas"
         xmlns:UserControls="clr-namespace:UI.UserControls;assembly=UI" x:Class="miProyecto.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Prospectos - ConCredito" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition MaxHeight="30"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <UserControls:NavBar Grid.Row="0"></UserControls:NavBar>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="spOpciones">
+            </StackPanel>
+        </Grid>
+        <UCVent:UCContenedor x:Name="contenedor" Grid.Column="1">
+
+        </UCVent:UCContenedor>
     </Grid>
 </Window>

@@ -41,9 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Documento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prospecto.cs" />
+    <Compile Include="ProspectoWrapper.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="Usuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{158b3608-7445-4351-9990-7933b51336e2}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
