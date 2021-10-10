@@ -33,6 +33,7 @@
             <usercontrols:UCTextbox x:Name="txtUser" Grid.Column="1" Grid.Row="0" Margin="5" UCText=""></usercontrols:UCTextbox>
             <usercontrols:UCPassword x:Name="txtPassword" Grid.Column="1" Grid.Row="1" Margin="5" UCPasswordText=""></usercontrols:UCPassword >
             <usercontrols:UCButton Grid.Column="1" Grid.Row="2" Margin="20,5,5,5" x:Name="btnEntrar" UCText="Entrar" UCIcon="Key" Width="100" HorizontalAlignment="Right" UCIsEnabled="true"></usercontrols:UCButton>
+
         </Grid>
 
 

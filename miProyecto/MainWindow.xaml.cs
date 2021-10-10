@@ -1,3 +1,4 @@
+
 ﻿using miProyecto.UCVentanas;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,6 @@ namespace miProyecto
         public MainWindow()
         {
             InitializeComponent();
-
             if (Storage.Rol.Equals("Promotor"))
             {
                 UCOpcionMenu om = new UCOpcionMenu();
@@ -55,6 +55,5 @@ namespace miProyecto
             UserControl ucontrol = (UserControl)Activator.CreateInstance(uc.UCUserControl);
             contenedor.agregarUC(ucontrol);
         }
-
     }
 }

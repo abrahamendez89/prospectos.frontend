@@ -36,7 +36,6 @@ namespace utilities
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-                
                 HttpResponseMessage response = await client.PostAsJsonAsync(path, bodyJson);
                 if (response.IsSuccessStatusCode)
                 {
